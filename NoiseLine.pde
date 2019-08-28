@@ -1,7 +1,9 @@
 class NoiseLine {
-  float yOffset = 0.0;
+  float yOffset;
   
-  NoiseLine(){}
+  NoiseLine(float offset){
+    yOffset = offset;
+  }
   
   void display(){
     noFill();
@@ -11,7 +13,7 @@ class NoiseLine {
     float xOffset = 0.0;
   
     for(float x = 0; x <= width; x+=10){
-      float y = map(noise(xOffset,yOffset),0,1,200,300);
+      float y = map(noise(xOffset,yOffset),0,1, 0,300);
       vertex(x,y);
       xOffset += 0.05;
     }
