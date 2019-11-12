@@ -9,9 +9,8 @@ class LineSystem{
     }
 
     void display(){
-        println("lines.size(): "+lines.size());
         if (lines.size() < numLines) {
-           minPos = lines.size()*150;
+           minPos = lines.size()*200;
            lines.add(new NoiseLine(offset,minPos));
            offset+=0.25;
        } 

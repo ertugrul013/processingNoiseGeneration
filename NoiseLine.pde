@@ -18,7 +18,7 @@ class NoiseLine{
 
     float yOffset = offset;
     vertex(0, 1000);
-    for(float x = 0; x <= width * 2; x+=10){
+    for(float x = 0; x <= width * 4; x+=10){
       float y = map(noise(xOffset,yOffset),0,1, 0,250);
       vertex(x,y);
       xOffset += 0.05;
